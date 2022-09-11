@@ -2,3 +2,7 @@ pyaes==1.6.1
 Pyrogram==2.0.30
 PySocks==1.7.1
 TgCrypto==1.2.3
+Telethon==1.25.0
+pytz
+tzdata==2022.2
+backports-zoneinfo
