@@ -13,7 +13,7 @@ bot = Client(
     'all subject bot',
     api_id=7009965,
     api_hash="06651b174c4f0591deb0ed1e5663c996",
-    bot_token='5697315513:AAHSUqsqGxwTNE2QM8t-_3jfGNj4XxzhQXc'
+    bot_token='5444699425:AAHImDT4yboGJTnKsyOTmkKkHnv908QsWs8'
     
 )
 
@@ -82,8 +82,7 @@ IT010_TEXT='2020 ප්‍රශ්න පත්‍ර සාකච්ඡාව\
 
 START_BUTTONS=[
     [InlineKeyboardButton('ENTER SUBJECT MENU',callback_data='A0001')],
-    [InlineKeyboardButton('SHARE CHANNEL',url='https://t.me/share/url?url=https%3A//t.me/BioVideoFullSyllubus')],
-    [InlineKeyboardButton('SHARE GROUP',url='https://t.me/share/url?url=https://t.me/+ug3NYtaYPGY2MGE1')],
+    [InlineKeyboardButton('SHARE GROUP',url='https://t.me/share/url?url=https%3A//t.me/al_ict_group_vc')],
     [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
 ]
 # subject menu
