@@ -922,15 +922,7 @@ def start(bot, message):
         reply_markup=reply_markup,
         disable_web_page_preview=True
     )
-@bot.on_message(filters.regex('al')) #start
-def start(bot, message):
-    text = 'Count down timer'
-    reply_markup = InlineKeyboardMarkup(time_buttons)
-    message.reply(
-        text=text,
-        reply_markup=reply_markup,
-        disable_web_page_preview=True
-    )
+
 
 time_buttons=[
     [InlineKeyboardButton('A/l Count down timer',callback_data='update')]
