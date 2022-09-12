@@ -1468,7 +1468,7 @@ def inline_query(client, inline_query):
                 ),
                 reply_markup=InlineKeyboardMarkup(START_BUTTONS)
             ),
-            InlineQueryResultArticle(
+            InlineQueryResultArticle( 
                 title="Count Down",
                 description="🔥උසස් පෙළ විභාගයට තව🔥",
                 input_message_content=InputTextMessageContent(
