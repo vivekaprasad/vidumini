@@ -1,9 +1,7 @@
 import asyncio
 from backports.zoneinfo import ZoneInfo
-from telethon import TelegramClient, events
 from re import I
 from datetime import datetime
-from tokenize import group
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, input_message_content, user_and_chats ,ReplyKeyboardMarkup ,ReplyKeyboardRemove
@@ -90,6 +88,7 @@ IT010_TEXT='2020 ප්‍රශ්න පත්‍ර සාකච්ඡාව\
 
 START_BUTTONS=[
     [InlineKeyboardButton('ENTER SUBJECT MENU',callback_data='A0001')],
+    [InlineKeyboardButton('A/l Count down',callback_data='update')],
     [InlineKeyboardButton('SHARE GROUP',url='https://t.me/share/url?url=https%3A//t.me/al_ict_group_vc')],
     [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
 ]
@@ -929,6 +928,7 @@ time_buttons=[
 ]
 update_buttons=[
     [InlineKeyboardButton('UPDATE TIME',callback_data="update")],
+    [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
 ]    
 
 
