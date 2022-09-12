@@ -939,9 +939,21 @@ update_buttons=[
     [InlineKeyboardButton('UPDATE TIME',callback_data="update")],
 ]    
 
+
+    
 @bot.on_callback_query()
 async def callback_query(client: Client, query: CallbackQuery):
-    if query.data=="update":
+    if query.data=="A0001":
+        reply_markup = InlineKeyboardMarkup(A0001_BUTTONS)
+        try:
+            await query.edit_message_text(
+                A0001_TEXT,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+    elif query.data=="update":
             global stoptimer
             
             dt1 = datetime(2022,12,5,00,00,00,000000,tzinfo=ZoneInfo('Asia/Kolkata'))
@@ -965,21 +977,6 @@ async def callback_query(client: Client, query: CallbackQuery):
                         )
                     except MessageNotModified:
                         pass
-
-    
-@bot.on_callback_query()
-async def callback_query(client: Client, query: CallbackQuery):
-    if query.data=="A0001":
-        reply_markup = InlineKeyboardMarkup(A0001_BUTTONS)
-        try:
-            await query.edit_message_text(
-                A0001_TEXT,
-                reply_markup=reply_markup
-            )
-        except MessageNotModified:
-            pass
-
-
 
     
 
