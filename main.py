@@ -928,7 +928,6 @@ time_buttons=[
 ]
 update_buttons=[
     [InlineKeyboardButton('UPDATE TIME',callback_data="update")],
-    [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
 ]    
 
 
