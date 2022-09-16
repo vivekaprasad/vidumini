@@ -780,6 +780,7 @@ BA_BUTTONS=[
 B0001_BUTTONS=[
     [InlineKeyboardButton('පසුගිය ප්‍රශ්නපත්‍ර',callback_data='B00001')],
     [InlineKeyboardButton('පසුගිය ප්‍රශ්නපත්‍ර වල පිලිතුරු',callback_data='B00002')],
+    [InlineKeyboardButton('Q & A BOOKS',callback_data='B00003')],
     [InlineKeyboardButton('⬅️BACK',callback_data='A0007')],
     [InlineKeyboardButton('SUBJECT MENU',callback_data='A0001'),InlineKeyboardButton('START MENU',callback_data='A0001')],
     [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
@@ -806,6 +807,19 @@ B00002_BUTTONS=[
     [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
 ]
 B00002_TEXT='build in progress🛠'
+B00003_TEXT='BIO Q & A BOOKS'
+
+B00003_BUTTONS=[
+    [InlineKeyboardButton('Unit 01 & 02',url='https://t.me/ictstudenthelper/655')],
+    [InlineKeyboardButton('Unit 03 & 04',url='https://t.me/ictstudenthelper/657')],
+    [InlineKeyboardButton('Unit 05',url='https://t.me/ictstudenthelper/659')],
+    [InlineKeyboardButton('Unit 06 & 07',url='https://t.me/ictstudenthelper/661')],
+    [InlineKeyboardButton('Unit 08',url='https://t.me/ictstudenthelper/663')],
+    [InlineKeyboardButton('Unit 09',url='https://t.me/ictstudenthelper/668')],
+    [InlineKeyboardButton('⬅️BACK',callback_data='B0001')],
+    [InlineKeyboardButton('SUBJECT MENU',callback_data='A0001'),InlineKeyboardButton('START MENU',callback_data='MAIN')],
+    [InlineKeyboardButton('❌CLOSE❌',callback_data='CLOSE')],
+]
 
 
 B0002_BUTTONS=[
@@ -1282,6 +1296,18 @@ async def callback_query(client: Client, query: CallbackQuery):
         except MessageNotModified:
             pass
 
+    elif query.data=='B00003':
+        reply_markup=InlineKeyboardMarkup(B00003_BUTTONS)
+        try:
+            await query.edit_message_text(
+                B00003_TEXT,
+                reply_markup=reply_markup
+            )
+        except MessageNotModified:
+            pass
+
+        
+        
     elif query.data=='BA':
         reply_markup=InlineKeyboardMarkup(BA_BUTTONS)
         try:
